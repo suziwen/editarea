@@ -52,7 +52,7 @@
 					content= content.replace(/</g,"&lt;");
 					content= content.replace(/>/g,"&gt;");
 					
-					if(this.nav['isIE'] || this.nav['isOpera'])
+					if(this.nav['isIE'] || this.nav['isOpera'] || this.nav['isFirefox'] >= 3)
 						this.selection_field.innerHTML= "<pre>" + content.replace("\n", "<br/>") + "</pre>";	
 					else
 						this.selection_field.innerHTML=content;

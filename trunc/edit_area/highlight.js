@@ -245,13 +245,11 @@
 					
 		// update the content of the highlight div by first updating a clone node (as there is no display in the same time for this node it's quite faster (5*))
 		var new_Obj= this.content_highlight.cloneNode(false);
-		//new_Obj.innerHTML= "<div class='keywords'>"+hightlighted_text+"</div>";	
-		if(this.nav['isIE'] || this.nav['isOpera'])
+		if(this.nav['isIE'] || this.nav['isOpera'] || this.nav['isFirefox'] >= 3 )
 			new_Obj.innerHTML= "<pre><span class='"+ this.settings["syntax"] +"'>" + hightlighted_text.replace("\n", "<br/>") + "</span></pre>";	
 		else
 			new_Obj.innerHTML= "<span class='"+ this.settings["syntax"] +"'>"+ hightlighted_text +"</span>";			
-		this.content_highlight.parentNode.insertBefore(new_Obj, this.content_highlight);
-		this.content_highlight.parentNode.removeChild(this.content_highlight);			
+		this.content_highlight.parentNode.replaceChild(new_Obj, this.content_highlight);
 		this.content_highlight= new_Obj;
 		if(infos["full_text"].indexOf("\r")!=-1)
 			this.last_text_to_highlight= infos["full_text"].replace(/\r/g, "");

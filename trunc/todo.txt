@@ -11,7 +11,6 @@
 - remove the bottom scrollbar is there is no neeed to get one. (adjust the width to the real content width). There is allways horizontal scrollbar even if no content.
 - amelioration of the scroll_to_view function for when there is several lines selected (center a little more the selected text)
 - darken background of the selection when syntax highlight is on (not easy to see actually under firefox)
-- read-only?
 - improve opera 9 compatibility (very hard, need help for workaround) cf "Browser remarks".
 - optimize scroll_to_view for Opera?
 - add word wrap option (nearly impossible, there is too much lacks of support from browsers, have spend more than 6 hours on this)
@@ -43,7 +42,7 @@ Firefox 1.5 & 2
 IE 6 & 7
 Opera 9
 
-Safari?
+Safari 3.1
 
 No more supported:
 Netscape 8 with rendering mode IE

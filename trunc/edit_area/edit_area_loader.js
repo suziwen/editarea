@@ -7,7 +7,7 @@
 ******/
 
 	function EditAreaLoader(){
-		this.version= "0.7.1";
+		this.version= "0.7.1.1";
 		date= new Date();
 		this.start_time=date.getTime();
 		this.win= "loading";	// window loading state

@@ -1,3 +1,6 @@
+**** v 0.7.1.1 ****
+- Firefox 3 RC1 compatibility
+
 **** v 0.7.1 ****
 - released under both LGPL and Apache license (you can use the one you prefer)
 - it's now possible to get a readonly mode: 

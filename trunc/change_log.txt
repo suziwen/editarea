@@ -1,5 +1,6 @@
 **** v 0.7.1.1 ****
 - Firefox 3 RC1 compatibility
+- Code size reduction: 120Ko => 107Ko for edit_area_full.js
 
 **** v 0.7.1 ****
 - released under both LGPL and Apache license (you can use the one you prefer)

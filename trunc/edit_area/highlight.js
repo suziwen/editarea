@@ -1,8 +1,8 @@
 	// change_to: "on" or "off"
 	EditArea.prototype.change_highlight= function(change_to){
 		if(this.settings["syntax"].length==0 && change_to==false){
-			this.switchClassSticky(document.getElementById("highlight"), 'editAreaButtonDisabled', true);
-			this.switchClassSticky(document.getElementById("reset_highlight"), 'editAreaButtonDisabled', true);
+			this.switchClassSticky($("highlight"), 'editAreaButtonDisabled', true);
+			this.switchClassSticky($("reset_highlight"), 'editAreaButtonDisabled', true);
 			return false;
 		}
 		
@@ -28,7 +28,7 @@
 	};
 	
 	EditArea.prototype.disable_highlight= function(displayOnly){		
-		document.getElementById("selection_field").innerHTML="";
+		$("selection_field").innerHTML="";
 		this.content_highlight.style.visibility="hidden";
 		// replacing the node is far more faster than deleting it's content in firefox
 		var new_Obj= this.content_highlight.cloneNode(false);
@@ -48,12 +48,12 @@
 		//setAttribute(icon, "class", getAttribute(icon, "class").replace(/ selected/g, "") );
 		//this.restoreClass(icon);
 		//this.switchClass(icon,'editAreaButtonNormal');
-		this.switchClassSticky(document.getElementById("highlight"), 'editAreaButtonNormal', true);
-		this.switchClassSticky(document.getElementById("reset_highlight"), 'editAreaButtonDisabled', true);
+		this.switchClassSticky($("highlight"), 'editAreaButtonNormal', true);
+		this.switchClassSticky($("reset_highlight"), 'editAreaButtonDisabled', true);
 	
 		this.do_highlight=false;
 	
-		this.switchClassSticky(document.getElementById("change_smooth_selection"), 'editAreaButtonSelected', true);
+		this.switchClassSticky($("change_smooth_selection"), 'editAreaButtonSelected', true);
 		if(typeof(this.smooth_selection_before_highlight)!="undefined" && this.smooth_selection_before_highlight===false){
 			this.change_smooth_selection_mode(false);
 		}
@@ -74,14 +74,14 @@
 		//var icon= document.getElementById("highlight");
 		//setAttribute(icon, "class", getAttribute(icon, "class") + " selected");
 		//this.switchClass(icon,'editAreaButtonSelected');
-		//this.switchClassSticky(document.getElementById("highlight"), 'editAreaButtonNormal', false);
-		this.switchClassSticky(document.getElementById("highlight"), 'editAreaButtonSelected', false);
-		this.switchClassSticky(document.getElementById("reset_highlight"), 'editAreaButtonNormal', false);
+		//this.switchClassSticky($("highlight"), 'editAreaButtonNormal', false);
+		this.switchClassSticky($("highlight"), 'editAreaButtonSelected', false);
+		this.switchClassSticky($("reset_highlight"), 'editAreaButtonNormal', false);
 		
 		this.smooth_selection_before_highlight=this.smooth_selection;
 		if(!this.smooth_selection)
 			this.change_smooth_selection_mode(true);
-		this.switchClassSticky(document.getElementById("change_smooth_selection"), 'editAreaButtonDisabled', true);
+		this.switchClassSticky($("change_smooth_selection"), 'editAreaButtonDisabled', true);
 		
 		
 		this.do_highlight=true;
@@ -237,7 +237,7 @@
 		tps2=date.getTime();
 		//updated_highlight= "<div class='keywords'>"+updated_highlight+"</div>";
 		var hightlighted_text= stay_begin + updated_highlight + stay_end;
-		//parent.document.getElementById("test_pre").innerHTML="<div class='keywords'>"+hightlighted_text+"</div>";
+		//parent.$("test_pre").innerHTML="<div class='keywords'>"+hightlighted_text+"</div>";
 		//this.previous_hightlight_content= tab_text.join("<br>");
 		
 		date= new Date();
@@ -266,7 +266,7 @@
 			tps_join=inner1-tps2;			
 			tps_td2=tps3-inner1;
 			//lineNumber=tab_text.length;
-			//this.debug.value+=" \nNB char: "+document.getElementById("src").value.length+" Nb line: "+ lineNumber;
+			//this.debug.value+=" \nNB char: "+$("src").value.length+" Nb line: "+ lineNumber;
 			this.debug.value= "Tps optimisation "+tot1+" (second part: "+tot_middle+") | tps reg exp: "+tot2+" | tps join: "+tps_join;
 			this.debug.value+= " | tps update highlight content: "+tps_td2+"("+tps3+")\n";
 			this.debug.value+=debug_opti;

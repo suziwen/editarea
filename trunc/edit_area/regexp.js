@@ -106,7 +106,7 @@
 		}
 		
 		if(parent.editAreaLoader.syntax[lang]["comment_or_quote_reg_exp"]){
-			//setTimeout("document.getElementById('debug_area').value=editArea.comment_or_quote_reg_exp;", 500);
+			//setTimeout("$('debug_area').value=editArea.comment_or_quote_reg_exp;", 500);
 			text= text.replace(parent.editAreaLoader.syntax[lang]["comment_or_quote_reg_exp"], this.comment_or_quote);
 		}
 		

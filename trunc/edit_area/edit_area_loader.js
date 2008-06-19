@@ -7,7 +7,7 @@
 ******/
 
 function EditAreaLoader(){
-	this.version= "0.7.1.1";
+	this.version= "0.7.1.2";
 	date= new Date();
 	this.start_time=date.getTime();
 	this.win= "loading";	// window loading state
@@ -53,6 +53,7 @@ function EditAreaLoader(){
 		,gecko_spellcheck: false	// enable/disable by default the gecko_spellcheck
 		,fullscreen: false
 		,is_editable: true
+		,wrap_text: false
 		,load_callback: ""		// click on load button (function name)
 		,save_callback: ""		// click on save button (function name)
 		,change_callback: ""	// textarea onchange trigger (function name)

@@ -1,3 +1,6 @@
+**** v 0.7.1.2 ****
+- Fix a  bug on the full screen mode (regression added on 0.7.1.1)
+
 **** v 0.7.1.1 ****
 - Firefox 3 RC1 compatibility
 - Code size reduction: 120Ko => 107Ko for edit_area_full.js

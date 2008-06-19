@@ -82,6 +82,15 @@ body, html, table, form, textarea{
 	overflow: hidden;
 }
 
+#container.wrap_text #content_highlight, #container.wrap_text #selection_field{
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	width: 99%;
+}
+
 #line_number{
 	position: absolute;
 	overflow: hidden;
